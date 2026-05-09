@@ -1,4 +1,4 @@
-.login-page {
+﻿.login-page {
   min-height: calc(100vh - 160px);
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
   background: #ffffff;
   border-radius: 22px;
   padding: 32px;
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+  box-shadow: var(--shadow-soft);
 }
 
 .login-card h2 {

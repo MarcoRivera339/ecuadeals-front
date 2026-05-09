@@ -1,8 +1,8 @@
-<section class="login-page">
+ï»¿<section class="login-page">
   <div class="container login-page__container">
     <div class="login-info">
       <p class="login-info__tag">Bienvenido a Ecuadeals</p>
-      <h1>Inicia sesión y sigue comprando productos ecuatorianos</h1>
+      <h1>Inicia sesiÃ³n y sigue comprando productos ecuatorianos</h1>
       <p>
         Accede a tu cuenta para gestionar tus compras, pedidos, carrito y
         futuras funciones como vendedor o administrador.
@@ -10,14 +10,14 @@
     </div>
 
     <div class="login-card">
-      <h2>Iniciar sesión</h2>
+      <h2>Iniciar sesiÃ³n</h2>
       <p class="login-card__subtitle">
         Ingresa tus credenciales para continuar
       </p>
 
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
         <div class="form-group">
-          <label for="email">Correo electrónico</label>
+          <label for="email">Correo electrÃ³nico</label>
           <input
             id="email"
             type="email"
@@ -31,14 +31,14 @@
                 El correo es obligatorio.
               }
               @if (email?.errors?.['email']) {
-                Ingresa un correo válido.
+                Ingresa un correo vÃ¡lido.
               }
             </small>
           }
         </div>
 
         <div class="form-group">
-          <label for="password">Contraseña</label>
+          <label for="password">ContraseÃ±a</label>
           <input
             id="password"
             type="password"
@@ -49,10 +49,10 @@
           @if (password?.touched && password?.invalid) {
             <small class="error">
               @if (password?.errors?.['required']) {
-                La contraseña es obligatoria.
+                La contraseÃ±a es obligatoria.
               }
               @if (password?.errors?.['minlength']) {
-                La contraseña debe tener al menos 6 caracteres.
+                La contraseÃ±a debe tener al menos 6 caracteres.
               }
             </small>
           }
@@ -71,8 +71,8 @@
 
       <div class="login-extra">
         <p>
-          ¿No tienes cuenta?
-          <a routerLink="/registro">Regístrate aquí</a>
+          Â¿No tienes cuenta?
+          <a routerLink="/registro">RegÃ­strate aquÃ­</a>
         </p>
       </div>
     </div>

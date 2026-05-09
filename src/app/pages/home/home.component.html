@@ -1,1 +1,42 @@
-<p>home works!</p>
+﻿<section class="hero">
+  <div class="container hero__content">
+    <div class="hero__text">
+      <p class="hero__tag">Compra productos ecuatorianos</p>
+      <h1>Descubre lo mejor del Ecuador en un solo lugar</h1>
+      <p class="hero__description">
+        Explora una tienda moderna con artesanías, moda, café, cacao y productos hechos por emprendedores ecuatorianos.
+      </p>
+      <div class="hero__buttons">
+        <a routerLink="/productos" class="btn-primary">Ver productos</a>
+        <a routerLink="/registro" class="btn-outline">Crear cuenta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destacados page-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Selección especial</p>
+      <h2>Productos destacados</h2>
+    </div>
+
+    <div class="productos-grid">
+      <article class="card" *ngFor="let producto of productosDestacados">
+        <img [src]="producto.imagen" [alt]="producto.nombre">
+        <div class="card__body">
+          <span class="card__category">{{ producto.categoria }}</span>
+          <h3>{{ producto.nombre }}</h3>
+          <p>{{ producto.descripcion }}</p>
+
+          <div class="card__price">
+            <strong>{{ producto.precio | currency:'USD':'symbol':'1.2-2' }}</strong>
+            <span *ngIf="producto.precioAnterior">{{ producto.precioAnterior | currency:'USD':'symbol':'1.2-2' }}</span>
+          </div>
+
+          <a routerLink="/productos" class="card__button">Ver más</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

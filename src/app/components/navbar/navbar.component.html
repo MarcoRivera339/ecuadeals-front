@@ -1,16 +1,18 @@
-<header class="navbar">
+﻿<header class="navbar">
+  <div class="container navbar__container">
     <div class="navbar__logo">
-        <a routerLink="/">Ecuadeals</a>
+      <a routerLink="/">Ecuadeals</a>
     </div>
 
     <nav class="navbar__links">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
-        <a routerLink="/productos" routerLinkActive="active">Productos</a>
-        <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/productos" routerLinkActive="active">Productos</a>
+      <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
     </nav>
 
     <div class="navbar__actions">
-        <a routerLink="/login" routerLinkActive="active" class="btn btn-secondary">Iniciar sesión</a>
-        <a routerLink="/registro" routerLinkActive="active" class="btn btn-primary">Registrarse</a>
+      <a routerLink="/login" routerLinkActive="active" class="btn btn-secondary">Iniciar sesión</a>
+      <a routerLink="/registro" routerLinkActive="active" class="btn btn-primary">Registrarse</a>
     </div>
+  </div>
 </header>

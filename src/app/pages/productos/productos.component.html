@@ -1,1 +1,27 @@
-<p>productos works!</p>
+﻿<section class="productos page-section">
+  <div class="container">
+    <div class="productos__header">
+      <p class="section-tag">Catálogo</p>
+      <h2>Nuestros productos</h2>
+      <p>Explora productos ecuatorianos seleccionados para una experiencia de compra moderna y confiable.</p>
+    </div>
+
+    <div class="productos__grid">
+      <article class="card" *ngFor="let producto of productos">
+        <img [src]="producto.imagen" [alt]="producto.nombre">
+        <div class="card__body">
+          <span class="card__category">{{ producto.categoria }}</span>
+          <h3>{{ producto.nombre }}</h3>
+          <p>{{ producto.descripcion }}</p>
+
+          <div class="card__price">
+            <strong>{{ producto.precio | currency:'USD':'symbol':'1.2-2' }}</strong>
+            <span *ngIf="producto.precioAnterior">{{ producto.precioAnterior | currency:'USD':'symbol':'1.2-2' }}</span>
+          </div>
+
+          <button (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

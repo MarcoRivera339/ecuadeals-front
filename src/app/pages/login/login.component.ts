@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+﻿import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -49,9 +49,9 @@ export class LoginComponent {
         this.isLoading = false;
 
         if (response.rol === 'ADMIN') {
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/']);
         } else if (response.rol === 'VENDEDOR') {
-          this.router.navigate(['/vendedor']);
+          this.router.navigate(['/']);
         } else {
           this.router.navigate(['/']);
         }
